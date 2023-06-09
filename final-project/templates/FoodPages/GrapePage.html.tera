@@ -1,0 +1,33 @@
+{% extends "userbase" %}
+{% block body %}
+  <div class="fruit-trade"> 
+    <img src = "images/grape-stock.jpg">
+    <a class="return-button" href = "/db"> 
+      Return
+    </a>  
+  </div>
+  <div class="trade-desc"> 
+    <div class="trade-desc-text"> 
+      The fruit that's never alone, Grape! <br>
+      Leave it out in the sun and you get the raisin. <br>
+      Eat it immediately and you get a delicious taste.<br>
+      Important to note, no green grapes over here.<br>
+      <div class ="trade-guide">Trade below and you can have grapes of your own!</div>
+    </div>
+    <div class="trade-form">
+      <form action = "/GrapeTrade" method = "POST">
+      <div class="trade-dropdown">
+        <input type="number" name="grape_count" min="0" oninput="validity.valid||(value=''); required="">
+        <select name="fruit" id="fruit">
+          <option value="Apple">Apple(s)</option>
+          <option value="Banana">Banana(s)</option>
+          <option value="Watermelon">Watermelon(s)</option>
+          <option value="Orange">Orange(s)</option>
+          <option value="Broccoli">Broccoli(s)</option>
+        </select>
+        <button>Trade</button>
+      </div> 
+      </form> 
+    </div>
+  </div>
+{% endblock body %}

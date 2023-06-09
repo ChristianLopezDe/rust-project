@@ -1,0 +1,45 @@
+{% extends "userbase" %}
+{% block body %}
+    <div class = "intro-container"> 
+      <div class = "intro-text">
+            If you want to alter your inventory count, this is the place for it!
+            Whether you want to withdraw some fruits or add some, we've got you covered!
+            If you change your mind, click below to return.
+            <a class="return-button-2" href = "/db"> Cancel Edit </a>
+      </div>
+    </div>
+
+    <div class="food-grid-container">
+      <form action = "/newUserSubmit" method = "POST">
+        <div class="food-grid-2">
+            <div class="food-container">
+              <img src = "images/apple-stock.jpg">
+              <input type="number" name="apple_count" min="0" oninput="validity.valid||(value=''); placeholder="Insert Total Quantity" required="">
+            </div>
+            <div class="food-container">
+              <img src = "images/banana-stock.jpg">
+              <input type="number" name="banana_count" min="0" oninput="validity.valid||(value=''); placeholder="Insert Total Quantity" required="">
+            </div>
+            <div class="food-container">
+              <img src = "images/watermelon-stock.jpg">
+              <input type="number" name="watermelon_count" min="0" oninput="validity.valid||(value=''); placeholder="Insert Total Quantity" required="">
+            </div>
+            <div class="food-container">
+              <img src = "images/orange-stock.jpg">
+              <input type="number" name="orange_count" min="0" oninput="validity.valid||(value=''); placeholder="Insert Total Quantity" required="">
+            </div>
+            <div class="food-container">
+              <img src = "images/broccoli-stock.jpg">
+              <input type="number" name="broccoli_count" min="0" oninput="validity.valid||(value=''); placeholder="Insert Total Quantity" required="">
+            </div>
+            <div class="food-container">
+              <img src = "images/grape-stock.jpg">
+              <input type="number" name="grape_count" min="0" oninput="validity.valid||(value=''); placeholder="Insert Total Quantity" required="">
+            </div>
+            <div class="food-grid-submit">
+              <button>Submit</button> 
+            </div>
+        </div>  
+      </form>
+  </div>
+{% endblock body %}

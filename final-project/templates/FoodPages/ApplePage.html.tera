@@ -1,0 +1,33 @@
+{% extends "userbase" %}
+{% block body %}
+  <div class="fruit-trade"> 
+    <img src = "images/apple-stock.jpg">
+    <a class="return-button" href = "/db"> 
+      Return
+    </a>  
+  </div>
+  <div class="trade-desc"> 
+    <div class="trade-desc-text"> 
+      The Red Apple! <br>
+      To some, it is better known as the forbidden fruit. <br>
+      To others, it is a source of inspiration to discover gravity. <br>
+      For most however, a delicious fruit to keep the doctor away.<br>
+      <div class ="trade-guide">Trade below and you can have a red apple of your own!</div>
+    </div>
+    <div class="trade-form">
+      <form action = "/AppleTrade" method = "POST">
+        <div class="trade-dropdown">
+          <input type="number" name="apple_count" min="0" oninput="validity.valid||(value=''); required="">
+          <select name="fruit" id="fruit">
+            <option value="Banana">Banana(s)</option>
+            <option value="Watermelon">Watermelon(s)</option>
+            <option value="Orange">Orange(s)</option>
+            <option value="Broccoli">Broccoli(s)</option>
+            <option value="Grape">Grape(s)</option>
+          </select> 
+          <button>Trade</button>
+        </div>  
+      </form>
+    </div>
+  </div>
+{% endblock body %}

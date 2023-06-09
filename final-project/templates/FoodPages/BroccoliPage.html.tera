@@ -1,0 +1,33 @@
+{% extends "userbase" %}
+{% block body %}
+  <div class="fruit-trade"> 
+    <img src = "images/broccoli-stock.jpg">
+    <a class="return-button" href = "/db"> 
+      Return
+    </a>  
+  </div>
+  <div class="trade-desc"> 
+    <div class="trade-desc-text"> 
+      Broccoli... <br>
+      Often forced down our throats as children. <br>
+      This vegetable gets better with age admittedly.<br>
+      If you want to turn his healthy snack unhealthy, add cheese!<br>
+      <div class ="trade-guide">Trade below and you can have broccoli of your own!</div>
+    </div>
+    <div class="trade-form">
+      <form action = "/BroccoliTrade" method = "POST">
+      <div class="trade-dropdown">
+        <input type="number" name="broccoli_count" min="0" oninput="validity.valid||(value=''); required="">
+        <select name="fruit" id="fruit">
+          <option value="Apple">Apple(s)</option>
+          <option value="Banana">Banana(s)</option>
+          <option value="Watermelon">Watermelon(s)</option>
+          <option value="Orange">Orange(s)</option>
+          <option value="Grape">Grape(s)</option>
+        </select>
+        <button>Trade</button>
+      </div>  
+      </form>
+    </div>
+  </div>
+{% endblock body %}

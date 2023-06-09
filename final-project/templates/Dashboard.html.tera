@@ -1,0 +1,32 @@
+{% extends "userbase" %}
+{% block body %}
+    <div class="trade-grid-container">
+      <div class="trade-grid">
+          <a class="personal-food-container" href = "/AppleTrade">
+            <img src = "images/apple-stock.jpg">
+            <!-- Future: Replace 0's with the quantity in total database. -->
+            <div class="personal-food-text">Apples for Trade: {{ website_inv.apple_stock }} </div>
+          </a>
+          <a class="personal-food-container" href = "/BananaTrade">
+            <img src = "images/banana-stock.jpg">
+            <div class="personal-food-text">Bananas for Trade: {{ website_inv.banana_stock }} </div>
+          </a>
+          <a class="personal-food-container" href = "/WatermelonTrade">
+            <img src = "images/watermelon-stock.jpg">
+            <div class="personal-food-text">Watermelons for Trade: {{ website_inv.watermelon_stock }} </div>
+          </a>
+          <a class="personal-food-container" href = "/OrangeTrade">
+            <img src = "images/orange-stock.jpg">
+            <div class="personal-food-text">Oranges for Trade: {{ website_inv.orange_stock }} </div>
+          </a>
+          <a class="personal-food-container" href = "/BroccoliTrade">
+            <img src = "images/broccoli-stock.jpg">
+            <div class="personal-food-text">Broccolis for Trade: {{ website_inv.broccoli_stock }} </div>
+          </a>
+          <a class="personal-food-container" href = "/GrapeTrade">
+            <img src = "images/grape-stock.jpg">
+            <div class="personal-food-text">Grapes for Trade: {{ website_inv.grape_stock }} </div>
+          </a>
+      </div>
+    </div>
+{% endblock body %}

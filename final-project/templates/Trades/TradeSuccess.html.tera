@@ -1,0 +1,11 @@
+{% extends "userbase" %}
+{% block body %}
+    <div class = "intro-container-2"> 
+      <div class = "intro-text-2">
+            Congratulations on making a successful transaction! <br>
+            Further information regarding this trade will be emailed to you momentarily.<br>
+            Click below to continue making trades!
+            <a class="return-button-3" href = "/db"> Return</a>
+      </div>
+    </div>
+{% endblock body %}

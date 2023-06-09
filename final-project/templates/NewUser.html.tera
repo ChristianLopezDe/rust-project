@@ -1,0 +1,47 @@
+{% extends "base" %}
+{% block body %}
+    <div class = "intro-container"> 
+      <div class = "intro-text">
+      <p id="demo"></p>
+        {% if user %}
+          Hello there {{ user.email }}. <br />
+        {% endif %} 
+        Before you get to trading, we'll need some more information regarding your inventory.
+        Towards the right, please insert the proper quantity you'll be working with.
+      </div>
+    </div>
+    <div class="food-grid-container">
+      <form action = "/newUserSubmit" method = "POST">
+        <div class="food-grid">
+          <!-Need to add placeholder name corrrectly. Also put button in middle. Lastly, connect to database. Optional: change size of box. -->
+            <div class="food-container">
+              <img src = "images/apple-stock.jpg">
+              <input type="number" name="apple_count" min="0" oninput="validity.valid||(value=''); placeholder="Insert Total Quantity" required="">
+            </div>
+            <div class="food-container">
+              <img src = "images/banana-stock.jpg">
+              <input type="number" name="banana_count" min="0" oninput="validity.valid||(value=''); placeholder="Insert Total Quantity" required="">
+            </div>
+            <div class="food-container">
+              <img src = "images/watermelon-stock.jpg">
+              <input type="number" name="watermelon_count" min="0" oninput="validity.valid||(value=''); placeholder="Insert Total Quantity" required="">
+            </div>
+            <div class="food-container">
+              <img src = "images/orange-stock.jpg">
+              <input type="number" name="orange_count" min="0" oninput="validity.valid||(value=''); placeholder="Insert Total Quantity" required="">
+            </div>
+            <div class="food-container">
+              <img src = "images/broccoli-stock.jpg">
+              <input type="number" name="broccoli_count" min="0" oninput="validity.valid||(value=''); placeholder="Insert Total Quantity" required="">
+            </div>
+            <div class="food-container">
+              <img src = "images/grape-stock.jpg">
+              <input type="number" name="grape_count" min="0" oninput="validity.valid||(value=''); placeholder="Insert Total Quantity" required="">
+            </div>
+            <div class="food-grid-submit">
+              <button>Submit</button> 
+            </div>
+        </div>
+      </form>
+  </div>
+{% endblock body %}
